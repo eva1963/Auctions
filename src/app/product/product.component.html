@@ -1,0 +1,14 @@
+<div *ngFor='let item of products' class="com-lg-4 col-md-4 col-ms-4">
+    <div class="thumbnail">
+        <img src="http://placehold.it/320x150" alt="">
+        <div class="caption">
+            <h4 class="pull-right">{{item.price}}元</h4>
+            <h4><a href="#">{{item.title}}</a></h4>
+            <p>{{item.desc}}</p>
+        </div>
+        <div>
+          <!--告诉组件我们当前rating的值是由父组件的rating决定的-->
+            <app-stars [rating]="item.rating"></app-stars>
+        </div>
+    </div>
+</div>
